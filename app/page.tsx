@@ -46,10 +46,30 @@ async function PaperList() {
 export default function Home() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-10">
-      <h1 className="text-4xl font-bold">bbClat</h1>
-      <p className="mb-10 mt-2 text-gray-600">
-        Free CLAT, AILET and SLAT past year papers. No login needed.
-      </p>
+      <section className="mb-12 rounded-2xl bg-blue-50 p-6 sm:p-10">
+        <h1 className="text-3xl font-bold sm:text-4xl">
+          Free CLAT, AILET &amp; SLAT past year papers
+        </h1>
+        <p className="mt-3 max-w-2xl text-gray-700">
+          Attempt real papers in a timed test, then see your marks, section-wise analysis and rank.
+          No login needed.
+        </p>
+        <div className="mt-6 grid gap-3 text-sm sm:grid-cols-3">
+          <div className="rounded-xl bg-white p-4 shadow-sm">
+            <div className="font-semibold">1. Pick a paper</div>
+            <div className="mt-1 text-gray-600">Choose CLAT, AILET or SLAT below.</div>
+          </div>
+          <div className="rounded-xl bg-white p-4 shadow-sm">
+            <div className="font-semibold">2. Take the test</div>
+            <div className="mt-1 text-gray-600">Timed, exam-style screen with a question palette.</div>
+          </div>
+          <div className="rounded-xl bg-white p-4 shadow-sm">
+            <div className="font-semibold">3. Get your analysis</div>
+            <div className="mt-1 text-gray-600">Marks, rank, section scores and answer review.</div>
+          </div>
+        </div>
+      </section>
+
       <Suspense fallback={<p>Loading papers...</p>}>
         <PaperList />
       </Suspense>
